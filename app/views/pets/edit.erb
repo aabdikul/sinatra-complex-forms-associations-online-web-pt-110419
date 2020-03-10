@@ -13,7 +13,7 @@ Select an Existing Owner:
   <%@owners.each do |owner|%>
   <br>
   <input type = "radio" name = "pet[owner_id]" value = "<%=owner.id%>" id = "<%=owner.id%>"
-  <%='checked' if @owner.pets.include?(pet)%><%=owner.name%><br>
+  <%='checked' if @pets.owner.include?(owner)%><%=owner.name%><br>
   <%end%>
 <br>
 New Owner:
