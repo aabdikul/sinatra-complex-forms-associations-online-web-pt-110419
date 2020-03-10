@@ -17,10 +17,6 @@ class PetsController < ApplicationController
 
   get '/pets/:id' do
     @pet = Pet.find(params[:id])
-    binding.pry
-    if !params["owners"]["name"].empty?
-      @pet.owner << Owner.create(name: params["owner"]["name"])
-    end
     erb :'/pets/show'
   end
 
