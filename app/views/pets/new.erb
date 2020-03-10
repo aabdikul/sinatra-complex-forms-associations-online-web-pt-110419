@@ -8,7 +8,7 @@ Select an Existing Owner:
   <br>
   <%@owners.each do |owner|%>
   <br>
-  <input type = "radio" name = "pet[owner_id]" value = "<%=owner.name%>" id = "<%=owner.id%>"><%=owner.name%><br>
+  <input type = "radio" name = "pet[owner_id]" value = "<%=owner.id%>" id = "<%=owner.name%>"><%=owner.name%><br>
   <%end%>
 <br>
 New Owner:
