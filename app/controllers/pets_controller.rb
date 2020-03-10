@@ -13,7 +13,7 @@ class PetsController < ApplicationController
 
   post '/pets' do
 
-    redirect to "pets/#{@pet.id}"
+    #redirect to "pets/#{@pet.id}"
   end
 
   get '/pets/:id' do
