@@ -35,7 +35,6 @@ class PetsController < ApplicationController
     @pet.update(params["pet"])
     if params["owners"]["name"] != ""
       @owner.name.update(name: params["owners"]["name"])
-      binding.pry
     end
     redirect to "pets/#{@pet.id}"
   end
