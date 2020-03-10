@@ -12,7 +12,7 @@ class PetsController < ApplicationController
 
   post '/pets' do
     @pet = Pet.create(params["owners"]["pet"])
-    if params["owners"]["name"] != nil
+    if params["owners"]["name"] != ""
       @pet.owner = Owner.create(name: params["owners"]["name"])
     end
     binding.pry
