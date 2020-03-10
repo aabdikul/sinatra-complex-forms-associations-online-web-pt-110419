@@ -17,6 +17,7 @@ class PetsController < ApplicationController
 
   get '/pets/:id' do
     @pet = Pet.find(params[:id])
+    binding.pry
     Owner.create(name: params["owner"]["name"])
     erb :'/pets/show'
   end
